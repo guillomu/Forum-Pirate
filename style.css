@@ -1,26 +1,116 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-body, html{
-	background-image: url("img/bateau.jpg");
+@font-face {
+  font-family: Pieces of Eight;
+  src: local(Pieces of Eight), url('font/Pieces of Eight.ttf') format("ttf"),
+      url('font/Pieces of Eight.ttf') format("opentype");
+}
+
+body, html {
+	background-color: #714f29;
+	color: black;
+	background-image: url("img/pirate-wallpaper.png");
+	background-size: 100%;
 	background-repeat: no-repeat;
-	background-color: black;
+	font-family: Pieces of Eight;
+	font-size: 22px;
+}
+
+html, body, .full-height {
+	height: 100%;
 }
 
 ul {
 	margin: auto;
 }
 
-img{
+img {
 	margin: auto;
 }
 
-h1{
+h1 {
 	border: 1px solid red;
 	text-align: center;
-	background-color: black;
+	background-color: transparent;
 	color: white;
 }
+
+h3 {
+	margin-top: 15%;
+}
+
+.row {
+	/*border: 5px solid red;*/
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+}
+
+.col {
+	/*border: 5px solid green;*/
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+.double {
+	flex: 2;
+}
+
+.triple {
+	flex: 3;
+}
+
+.quad {
+	flex: 4;
+}
+
+.quinte {
+	flex: 5;
+}
+
+#image {
+	width: 25%;
+	height: 200px;
+	border: 1px solid green;
+	display: inline-block;
+}
+
+#message-accueil {
+	width: 400px;
+	margin: auto;
+}
+
+.navbar {
+	background-color: #54544f;
+	opacity: 0.8;
+	padding: 20px;
+	border: 2px solid black;
+}
+
+.parchemin {
+	background-image: url("img/parchemin3.png");
+	background-repeat: no-repeat;
+	background-size: 70%;
+	background-position: center;
+	text-align: center;
+}
+
+
+/* .faux-rhum{
+	background-image: url("img/Boutons/forum.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.inscription{
+	background-image: url("img/Boutons/plume.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+} */
