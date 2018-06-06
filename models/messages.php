@@ -1,6 +1,6 @@
 <?php
 
-require_once "models/messages.php";
+require_once "./models/model.php";
 
 class MessagesModel extends Model {
 
@@ -12,7 +12,7 @@ class MessagesModel extends Model {
   $sql= "select * from messages";
   $query= $db -> prepare ($sql);
   $query -> execute ();
-  $tasklist= $query -> fetchAll();
+  $messageslist= $query -> fetchAll();
   return $messageslist;
 
 }

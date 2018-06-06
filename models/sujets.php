@@ -1,6 +1,6 @@
 <?php
 
-require_once "models/sujets.php";
+require_once "./models/model.php";
 
 class SujetsModel extends Model {
 
@@ -12,7 +12,7 @@ class SujetsModel extends Model {
   $sql= "select * from sujets";
   $query= $db -> prepare ($sql);
   $query -> execute ();
-  $tasklist= $query -> fetchAll();
+  $sujetslist= $query -> fetchAll();
   return $sujetslist;
 }
 }

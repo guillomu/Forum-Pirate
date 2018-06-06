@@ -1,7 +1,7 @@
 <?php
 
 
-require_once "models/salons.php";
+require_once "./models/model.php";
 
 class SalonsModel extends Model {
 
@@ -13,7 +13,7 @@ class SalonsModel extends Model {
   $sql= "select * from salons";
   $query= $db -> prepare ($sql);
   $query -> execute ();
-  $tasklist= $query -> fetchAll();
+  $salonslist= $query -> fetchAll();
   return $salonslist;
 
 }

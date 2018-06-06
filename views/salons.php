@@ -1,7 +1,7 @@
 <?php
 
-foreach ($SalonsListView as $salons){
-  echo "<br/>-".$salons["titre"];
+foreach ($SalonsListView as $sal){
+  echo "<br/>-".$sal["titre"];
 }
 
  ?>

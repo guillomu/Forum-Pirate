@@ -11,7 +11,7 @@ class Route {
       else {
         $url="/";
       }
-  
+
     $urlTrim= trim($url,"/");
 
 
@@ -26,7 +26,7 @@ class Route {
  echo "methode getController de route ";
 
     $controller= $this->formatUrl() [1];
-    echo "<br/> mon controller:".$controller;
+    
 
 
     require_once "controllers/".$controller. ".php";

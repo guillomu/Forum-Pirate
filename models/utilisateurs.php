@@ -1,6 +1,6 @@
 <?php
 
-require_once "models/utilisateurs.php";
+require_once "./models/model.php";
 
 class UtilisateursModel extends Model {
 
@@ -12,7 +12,7 @@ class UtilisateursModel extends Model {
   $sql= "select * from utilisateurs";
   $query= $db -> prepare ($sql);
   $query -> execute ();
-  $tasklist= $query -> fetchAll();
+  $utilisateurslist= $query -> fetchAll();
   return $utilisateurslist;
 
 }

@@ -1,4 +1,4 @@
-	<body>
+
 
 		<div class="col full-height">
 			<div class="row navbar">
@@ -76,7 +76,7 @@
 
 				<div class="ih-item circle effect18 left_to_right">
 					<a href="#">
-						<div class="img">								
+						<div class="img">
 							<h3>Messages Privés</h3>
 						</div>
 						<div class="info">
@@ -93,7 +93,7 @@
 	</div>
 	<div class="col"></div>
 </div>
-	<!-- NavBar ~~ Bootstrap 
+	<!-- NavBar ~~ Bootstrap
 	<nav class="navbar navbar-expand-lg navbar-dark">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -140,4 +140,3 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 	<script src="main.js"></script>
-</body>

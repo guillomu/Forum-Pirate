@@ -1,6 +1,6 @@
 <?php
 
-require_once "models/mesprives.php";
+require_once "./models/model.php";
 
 class MesprivesModel extends Model {
 
@@ -12,7 +12,7 @@ class MesprivesModel extends Model {
   $sql= "select * from messagesprives";
   $query= $db -> prepare ($sql);
   $query -> execute ();
-  $tasklist= $query -> fetchAll();
+  $Mespriveslist= $query -> fetchAll();
   return $Mespriveslist;
 
 }
