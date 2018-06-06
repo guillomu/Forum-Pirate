@@ -5,15 +5,15 @@
 }
 
 @font-face {
-  font-family: Pieces of Eight;
-  src: local(Pieces of Eight), url('font/Pieces of Eight.ttf') format("ttf"),
-      url('font/Pieces of Eight.ttf') format("opentype");
+	font-family: Pieces of Eight;
+	src: local(Pieces of Eight), url('font/Pieces of Eight.ttf') format("ttf"),
+	url('font/Pieces of Eight.ttf') format("opentype");
 }
 
 body, html {
-	background-color: #714f29;
+	background-color: black;
 	color: black;
-	background-image: url("img/pirate-wallpaper.png");
+	background-image: url("img/wallpaper-pirate-1280-800.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
 	font-family: Pieces of Eight;
@@ -37,10 +37,6 @@ h1 {
 	text-align: center;
 	background-color: transparent;
 	color: white;
-}
-
-h3 {
-	margin-top: 15%;
 }
 
 .row {
@@ -80,26 +76,50 @@ h3 {
 	display: inline-block;
 }
 
-#message-accueil {
-	width: 400px;
-	margin: auto;
+#message-accueil-container {
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+#message-accueil{
+	width: 70%;
+    font-size: 1.8vw;
+}
+
+#message-accueil h3{
+	margin-bottom: 10%;
 }
 
 .navbar {
-	background-color: #54544f;
-	opacity: 0.8;
+	/*background-color: #54544f;
+	opacity: 0.8;*/
 	padding: 20px;
-	border: 2px solid black;
+	color: white;
+	/*border: 2px solid black;*/
+}
+.accueil-img{
+	background-image: url("img/boussole.png");
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	opacity: 0.5;
 }
 
 .parchemin {
 	background-image: url("img/parchemin3.png");
+	background-size: contain;
 	background-repeat: no-repeat;
-	background-size: 70%;
 	background-position: center;
 	text-align: center;
 }
 
+.fade-in-text{
+	animation: fadeIn 5s linear 1;
+}
 
 /* .faux-rhum{
 	background-image: url("img/Boutons/forum.png");
@@ -113,4 +133,14 @@ h3 {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
-} */
+	} */
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 100%;
+		}
+	}

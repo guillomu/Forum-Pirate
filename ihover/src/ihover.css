@@ -32,6 +32,10 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  color: white;
+  font-style: none;
+  text-align: center;
+  background-color: rgb(0,0,0, 0.2);
 }
 .ih-item.circle .img:before {
   position: absolute;
@@ -40,7 +44,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
@@ -48,6 +52,21 @@
 .ih-item.circle .img img {
   border-radius: 50%;
 }
+
+.ih-item.circle .info img {
+  border-radius: 50%;
+}
+
+.ih-item.circle .info-back .bouteille{
+  width:auto;
+}
+
+.ih-item.circle .img h3 {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+
 .ih-item.circle .info {
   position: absolute;
   top: 0;
@@ -2297,10 +2316,10 @@
   text-transform: uppercase;
   position: relative;
   letter-spacing: 2px;
-  font-size: 17px;
+  font-size: 16px;
   margin: 0 0;
-  padding: 55px 0 0 0;
-  height: 110px;
+  padding: 50px 0 0 0;
+  height: 90px;
   text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 .ih-item.circle.effect18 .info p {
