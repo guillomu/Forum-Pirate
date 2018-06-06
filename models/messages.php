@@ -4,7 +4,7 @@ require_once "models/messages.php";
 
 class MessagesModel extends Model {
 
-  public function getById(){
+  public function getAll(){
 
   $db=parent::connect();
 
@@ -15,7 +15,8 @@ class MessagesModel extends Model {
   $tasklist= $query -> fetchAll();
   return $messageslist;
 
-
+}
+}
 
 
  ?>

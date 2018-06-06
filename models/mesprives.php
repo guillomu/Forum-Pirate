@@ -4,7 +4,7 @@ require_once "models/mesprives.php";
 
 class MesprivesModel extends Model {
 
-  public function getById(){
+  public function getAll(){
 
   $db=parent::connect();
 
@@ -15,9 +15,8 @@ class MesprivesModel extends Model {
   $tasklist= $query -> fetchAll();
   return $Mespriveslist;
 
-
-
-
+}
+}
 
 
  ?>

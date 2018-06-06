@@ -4,7 +4,7 @@ require_once "models/sujets.php";
 
 class SujetsModel extends Model {
 
-  public function getById(){
+  public function getAll(){
 
   $db=parent::connect();
 
@@ -14,6 +14,7 @@ class SujetsModel extends Model {
   $query -> execute ();
   $tasklist= $query -> fetchAll();
   return $sujetslist;
-
+}
+}
 
  ?>

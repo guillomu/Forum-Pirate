@@ -4,7 +4,7 @@ require_once "models/utilisateurs.php";
 
 class UtilisateursModel extends Model {
 
-  public function getById, getByName(){
+  public function getAll(){
 
   $db=parent::connect();
 
@@ -15,6 +15,7 @@ class UtilisateursModel extends Model {
   $tasklist= $query -> fetchAll();
   return $utilisateurslist;
 
-
+}
+}
 
  ?>

@@ -5,7 +5,7 @@ require_once "models/salons.php";
 
 class SalonsModel extends Model {
 
-  public function getById (){
+  public function getAll (){
 
   $db=parent::connect();
 
@@ -16,7 +16,8 @@ class SalonsModel extends Model {
   $tasklist= $query -> fetchAll();
   return $salonslist;
 
-
+}
+}
 
 
 
