@@ -1,24 +1,20 @@
 <?php
 
-
 require_once "./models/model.php";
 
 class SalonsModel extends Model {
 
-  public function getAll (){
+	public function getAll (){
 
-  $db=parent::connect();
+		$db=parent::connect();
 
+		$sql = "select * from salons";
+		$query = $db -> prepare("select * from salons");
+		$query -> execute();
+		$salonsList= $query -> fetchAll();
 
-  $sql= "select * from salons";
-  $query= $db -> prepare ($sql);
-  $query -> execute ();
-  $salonslist= $query -> fetchAll();
-  return $salonslist;
-
+		return $salonsList;
+	}
 }
-}
 
-
-
- ?>
+?>

@@ -33,7 +33,6 @@ img {
 }
 
 h1 {
-	border: 1px solid red;
 	text-align: center;
 	background-color: transparent;
 	color: white;
@@ -121,19 +120,12 @@ h1 {
 	animation: fadeIn 5s linear 1;
 }
 
-/* .faux-rhum{
-	background-image: url("img/Boutons/forum.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
+.erreur{
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	color: white;
 }
-
-.inscription{
-	background-image: url("img/Boutons/plume.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	} */
 
 	@keyframes fadeIn {
 		0% {

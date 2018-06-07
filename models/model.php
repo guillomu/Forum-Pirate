@@ -4,7 +4,7 @@
 class Model{
 
 private $user = "root";
-private $password= "";
+private $password= "simplonco";
 private $dbname= "forum_pirate";
 private $host= "localhost";
 private $port= 3306;
@@ -18,8 +18,6 @@ public function connect(){
   catch(PDOException $e) {
     echo "erreur";
   }
-  echo "Je me connecte à ma base de données";
-
 
 }
 

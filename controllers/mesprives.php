@@ -7,4 +7,4 @@ $MesprivesListView= $mesprives->getAll();
 
 require_once "views/mesprives.php";
 
- ?>
+?>

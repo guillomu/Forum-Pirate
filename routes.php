@@ -9,7 +9,7 @@ class Route {
       $url = $_SERVER["PATH_INFO"];
     }
     else {
-      $url="/";
+      $url="/home/";
     }
 
     $urlTrim= trim($url,"/");
@@ -25,15 +25,16 @@ class Route {
   public function getController(){
 
    $controller= $this->formatUrl()[1];
-   echo $controller;
+
    
-   
-   
-      $controllerPath = "controllers/".$controller.".php";
+   $controllerPath = "controllers/".$controller.".php";
 
      // On teste si le fichier existe avant de l'inclure pour eviter une erreur
    if(file_exists($controllerPath)){
     require_once $controllerPath;
+  }
+  else{
+    require_once "views/error.php";
   }
 }
 }

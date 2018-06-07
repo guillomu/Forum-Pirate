@@ -7,7 +7,7 @@
 				<div class="col-sm-6">
 
 					<!-- normal -->
-					<div class="ih-item circle effect18 left_to_right"><a href="#">
+					<div class="ih-item circle effect18 left_to_right"><a href="index.php/salons">
 						<div class="img"><h3>Faux-Rhum</h3></div>
 						<div class="info">
 							<div class="info-back">
@@ -29,7 +29,7 @@
 			<div class="col-sm-6">
 
 				<!-- normal -->
-				<div class="ih-item circle effect18 left_to_right"><a href="/inscription">
+				<div class="ih-item circle effect18 left_to_right"><a href="index.php/inscription">
 					<div class="img"><h3>Inscription</h3></div>
 					<div class="info">
 						<div class="info-back">
@@ -51,7 +51,7 @@
 		<div class="col-sm-6">
 
 			<!-- normal -->
-			<div class="ih-item circle effect18 left_to_right"><a href="#">
+			<div class="ih-item circle effect18 left_to_right"><a href="index.php/profil">
 				<div class="img"><h3>Profil</h3></div>
 				<div class="info">
 					<div class="info-back">
@@ -73,7 +73,7 @@
 			<!-- normal -->
 
 			<div class="ih-item circle effect18 left_to_right">
-				<a href="#">
+				<a href="index.php/mesprives">
 					<div class="img">
 						<h3>Messages Privés</h3>
 					</div>
