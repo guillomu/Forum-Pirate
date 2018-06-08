@@ -29,14 +29,22 @@ class UtilisateursModel extends Model {
 		}
 	}
 
-	public function add(UtilisateursModel $user){
+	public function add(UtilisateursModel $utilisateur){
 
+		$db=parent::connect();
 
-		$sql= "INSERT INTO * FROM utilisateurs";
+		$sql= "INSERT INTO utilisateurs SET nom_utilisateur = :nom_utilisateur, mdp = :mdp, email = :email, avatar = :avatar, prenom = :prenom, nom = :nom, date_de_naissance = :date_de_naissance, statut = :statut";
+
 		$query= $db -> prepare ($sql);
+		$query->bindValue(':nom_utilisateur', $utilisateur->nom_utilisateur());
+		$query->bindValue(':mdp', $utilisateur->mdp());
+		$query->bindValue(':email', $utilisateur->email());
+		$query->bindValue(':avatar', $utilisateur->avatar());
+		$query->bindValue(':prenom', $utilisateur->prenom());
+		$query->bindValue(':nom', $utilisateur->nom());
+		$query->bindValue(':date_de_naissance', $utilisateur->date_de_naissance());
+		$query->bindValue(':statut', $utilisateur->statut());
 		$query -> execute ();
-		$utilisateurslist= $query -> fetchAll();
-		return $utilisateurslist;
 	}
 
 	public function getAll(){
