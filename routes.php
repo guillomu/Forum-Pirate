@@ -29,7 +29,7 @@ class Route {
    
    $controllerPath = "controllers/".$controller.".php";
 
-     // On teste si le fichier existe avant de l'inclure pour eviter une erreur
+    // On teste si le fichier existe avant de l'inclure pour eviter une erreur
    if(file_exists($controllerPath)){
     require_once $controllerPath;
   }

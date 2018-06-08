@@ -1,11 +1,10 @@
 <?php
 
-
 session_start();
-$titre="Enregistrement";
 
 if (empty($_POST['pseudo'])) // Si on la variable est vide, on peut considérer qu'on est sur la page de formulaire
 {
+	echo '<div id="inscription">';
 	echo '<h1>Inscription</h1>';
 	echo '<form method="post" action="inscription.php" enctype="multipart/form-data">
 	<fieldset><legend>Identifiants</legend>
@@ -29,11 +28,11 @@ if (empty($_POST['pseudo'])) // Si on la variable est vide, on peut considérer 
 
 
 	<p>Les champs précédés d un * sont obligatoires</p>
-	<p><input type="submit" value="S\'inscrire" /></p></form>
+	<p class="text-center"><input  type="submit" value="S\'inscrire" /></p></form>
 	</div>
 	</body>
 	</html>';
-
+	echo '</div>';
 
 } //Fin de la partie formulaire
 ?>
