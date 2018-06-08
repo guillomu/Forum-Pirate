@@ -47,7 +47,6 @@
 <div class="col connexion text-center double">
 	<?php require_once "./views/connexion.php"; ?>
 </div>
-<div class="col"></div>
 <?php 
 } 
 else{

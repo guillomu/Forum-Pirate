@@ -122,7 +122,7 @@ fieldset{
 	text-align: center;
 }
 
-.erreur{
+.erreur-red{
 	color: red;
 }
 .navbar {
@@ -197,12 +197,22 @@ fieldset{
 	left: -50%;
 }
 
-	@keyframes fadeIn {
-		0% {
-			opacity: 0;
-		}
+.validation{
+	width: 35%;
+	margin: auto;
+	background-color: #2E8B57;
+	border: 1px solid green;
+	padding: 10px;
+	text-align: center;
+	border-radius: 25px;
+}
 
-		100% {
-			opacity: 100%;
-		}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
 	}
+
+	100% {
+		opacity: 100%;
+	}
+}

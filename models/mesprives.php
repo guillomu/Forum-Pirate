@@ -4,19 +4,19 @@ require_once "./models/model.php";
 
 class MesprivesModel extends Model {
 
-  public function getAll(){
+	public function getAll(){
 
-  $db=parent::connect();
+		$db=parent::connect();
 
 
-  $sql= "select * from messagesprives";
-  $query= $db -> prepare ($sql);
-  $query -> execute ();
-  $Mespriveslist= $query -> fetchAll();
-  return $Mespriveslist;
+		$sql= "select * from messagesprives";
+		$query= $db -> prepare ($sql);
+		$query -> execute ();
+		$Mespriveslist= $query -> fetchAll();
+		return $Mespriveslist;
 
+	}
 }
-}
 
 
- ?>
+?>
