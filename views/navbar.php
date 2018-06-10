@@ -22,7 +22,7 @@
 	<!-- end Left to right -->
 </div>
 <div class="col"></div>
-<?php if(!isset($_POST['pseudo'])){ ?>
+<?php if(!isset($_SESSION['utilisateur'])){ ?>
 	<div class="col inscription">
 		<!-- Left to right -->
 		<div class="row">
@@ -94,6 +94,30 @@ else{
 		</div>
 	</div>
 	<!-- end Left to right -->
+</div>
+<div class="col"></div>
+<div class="col disconnect">
+	<!-- Left to right -->
+	<div class="row">
+		<div class="col-sm-6 bloc-center">
+			<!-- normal -->
+
+			<div class="ih-item circle effect18 left_to_right">
+				<?php echo '<a href="/Forum-Pirate/index.php/'.$controllers[1].'/deconnexion">'; ?>
+					<div class="img">
+						<h3>Déconnexion</h3>
+					</div>
+					<div class="info">
+						<div class="info-back">
+						</div>
+					</div>
+				</a>
+			</div>
+			<!-- end normal -->
+		</div>
+	</div>
+	<!-- end Left to right -->
+	<p class="text-center">Bonjour mousaillon <?php echo $_SESSION['utilisateur']->nom_utilisateur(); ?>!<p>
 </div>
 <div class="col"></div>
 <?php } ?>

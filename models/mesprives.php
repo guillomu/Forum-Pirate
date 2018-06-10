@@ -9,7 +9,7 @@ class MesprivesModel extends Model {
 		$db=parent::connect();
 
 
-		$sql= "select * from messagesprives";
+		$sql= "select * from messages_prives";
 		$query= $db -> prepare ($sql);
 		$query -> execute ();
 		$Mespriveslist= $query -> fetchAll();

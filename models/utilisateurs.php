@@ -14,6 +14,7 @@ class UtilisateursModel extends Model {
 	private $date_de_naissance;
 	private $statut;
 
+
 	// CONSTRUCTEUR //
 	public function __construct (array $donnees){
 		$this->hydrate($donnees);
@@ -64,6 +65,53 @@ class UtilisateursModel extends Model {
 
 	}
 
+
+	//Enregistre les données par rapport a un Id ou un nom d'utilisateur
+	public function get($data){
+
+		$db=parent::connect();
+
+		// Si in entier est en paramètre on récupère par rapport à l'Id
+		if(is_int($data)){
+			$sql= "SELECT * FROM utilisateurs WHERE id = :id";
+			$query= $db -> prepare ($sql);
+			$query->bindValue(':id', $data);
+		}
+
+		// Si une chaine de charactères est en paramètre on récupère par rapport au nom d'utilisateur
+		else if (is_string($data)){
+			$sql= "SELECT * FROM utilisateurs WHERE nom_utilisateur = :nom_utilisateur";
+			$query= $db -> prepare ($sql);
+			$query->bindValue(':nom_utilisateur', $data);
+		}
+
+		else{ 
+			// Si le paramètre est incorrect on retourne false
+			return false;
+		}
+
+		$query -> execute ();
+		$result = $query->fetch();
+
+		if($result && $result['nom_utilisateur'] != ''){
+		// On enregistre les valeurs dans l'instance actuelle
+			$this->setId($result['id']);
+			$this->setNom_utilisateur($result['nom_utilisateur']);
+			$this->setMdp($result['mdp']);
+			$this->setEmail($result['email']);
+			$this->setAvatar($result['avatar']);
+			$this->setPrenom($result['prenom']);
+			$this->setNom($result['nom']);
+			$this->setDate_de_naissance($result['date_de_naissance']);
+			$this->setStatut($result['statut']);
+
+			return true;
+		}
+		else{
+			return false; // Si il n'y a pas de resultat on retourne false
+		}
+	}
+
 	// GETTERS //
 	public function id() { return $this->id; }
 	public function nom_utilisateur() { return $this->nom_utilisateur; }
@@ -96,7 +144,7 @@ class UtilisateursModel extends Model {
 		}
 	}
 
-	public function setemail( $email ){
+	public function setEmail( $email ){
 		if(is_string($email)){
 			$this->email = $email;
 		}

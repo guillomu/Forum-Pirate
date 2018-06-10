@@ -156,6 +156,10 @@ fieldset{
 	margin: 5px;
 }
 
+.connexion a{
+	color: white;
+}
+
 .salon{
 	width: 80%;
 	border: 1px solid black;

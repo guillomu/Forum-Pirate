@@ -1,11 +1,9 @@
 <?php
 
 class Route {
-  private function formatUrl(
-  ){
-    //localhost:8888/tasks/
+  private function formatUrl(){
+
     if (isset($_SERVER["PATH_INFO"])){
-    //localhost:8888/tasks/filter
       $url = $_SERVER["PATH_INFO"];
     }
     else {
@@ -24,14 +22,22 @@ class Route {
 
   public function getController(){
 
-   $controller= $this->formatUrl()[1];
+   $controllers= $this->formatUrl();
 
-   
-   $controllerPath = "controllers/".$controller.".php";
+   //Controlleurs de Connexion / Déconnexion
+  if(isset($controllers[2]) && $controllers[2] == "connexion"){
+    require_once "controllers/connexion.php";
+  }
+  else if(isset($controllers[2]) && $controllers[2] == "deconnexion"){
+    require_once "controllers/deconnexion.php";
+  }
+
+  $controllerPath = "controllers/".$controllers[1].".php";
 
     // On teste si le fichier existe avant de l'inclure pour eviter une erreur
-   if(file_exists($controllerPath)){
+  if(file_exists($controllerPath)){
     require_once $controllerPath;
+    return $controllers;
   }
   else{
     require_once "views/error.php";
