@@ -29,6 +29,7 @@ class UtilisateursModel extends Model {
 		}
 	}
 
+	//INSERT INTO
 	public function add(UtilisateursModel $utilisateur){
 
 		$db=parent::connect();
@@ -45,8 +46,11 @@ class UtilisateursModel extends Model {
 		$query->bindValue(':date_de_naissance', $utilisateur->date_de_naissance());
 		$query->bindValue(':statut', $utilisateur->statut());
 		$query -> execute ();
+
+		return $query;
 	}
 
+	// SELECT *
 	public function getAll(){
 
 		$db=parent::connect();

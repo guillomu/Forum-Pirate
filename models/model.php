@@ -13,6 +13,7 @@ class Model{
 	public function connect(){
 		try{
 			$db= new PDO ("mysql:host=".$this->host.";dbname=".$this->dbname,$this->user,$this->password);
+			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			return $db;
 		}
 		catch(PDOException $e) {
