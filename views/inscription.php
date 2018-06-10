@@ -1,13 +1,12 @@
 <?php
 
-session_start();
 
 if (!isset($_POST['inscription'])) // Si on la variable est vide, on peut considérer qu'on est sur la page de formulaire
 {
 	echo '<div id="inscription" class="col">';
 	echo '<div class="row"><h1 class="bloc-center">Inscription</h1></div>';
 	echo '<div class="row">';
-	echo '<div class="col double"';
+	echo '<div class="col double">';
 	echo '<form method="post" action="/Forum-Pirate/index.php/inscription" enctype="multipart/form-data">
 	<fieldset><legend>Identifiants</legend>
 	<label for="pseudo">* Pseudo :</label>  <input name="pseudo" type="text" id="pseudo" placeholder= "choisis ton nom de pirate"/> (le pseudo doit contenir entre 3 et 15 caractères)<br />
