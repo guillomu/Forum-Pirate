@@ -10,6 +10,7 @@
 	<link href="/Forum-Pirate/style.css" rel="stylesheet">
 	<link href="/Forum-Pirate/ihover/src/ihover.css" rel="stylesheet">
 	<link rel="shortcut icon" href="/Forum-Pirate/img/pirate-icon.png">
+	<script src="jquery-3.3.1.min.js"></script>
 </head>
 
 <body>

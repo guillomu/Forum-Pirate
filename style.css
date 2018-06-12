@@ -38,7 +38,7 @@ h1 {
 }
 
 a{
-	color: black;
+	color: white;
 	text-decoration: none;
 	outline: 0;
 }
@@ -119,12 +119,13 @@ fieldset{
 
 #salons{
 	width: 70%;
-	background-color: rgb(192,192,192, 0.6);
-	border: 1px solid black;
+	background-color: rgb(0,0,0, 0.6);
+	border: 1px solid white;
 	border-radius: 25px;
 	margin: 2% auto;
 	padding: 25px;
 	text-align: center;
+	color: white;
 }
 
 
@@ -162,14 +163,15 @@ fieldset{
 
 .salon{
 	width: 80%;
-	border: 1px solid black;
+	border: 1px solid white;
 	margin: 2% auto;
 	text-align: center;
 	border-radius: 25px;
+	color: white;
 }
 
 .salon:hover{
-	background-color: white;
+	background-color: black;
 }
 
 .accueil-img{
