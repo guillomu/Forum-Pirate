@@ -4,11 +4,11 @@
 class Model{
 
 	private $user = "root";
-	private $password= "simplonco";
+	private $password= "";
 // private $password= "";
 	private $dbname= "forum_pirate";
 	private $host= "localhost";
-	private $port= 3306;
+	private $port= 8088;
 
 	public function connect(){
 		try{
