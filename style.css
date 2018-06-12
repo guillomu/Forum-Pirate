@@ -1,3 +1,5 @@
+/* Page index */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -10,7 +12,7 @@
 	url('font/Pieces of Eight.ttf') format("opentype");
 }
 
-body, html {
+body {
 	background-color: black;
 	color: black;
 	background-image: url("img/wallpaper-pirate-1280-800.jpg");
@@ -89,7 +91,7 @@ fieldset{
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
-	align-items: center; 
+	align-items: center;
 }
 
 #message-accueil{
@@ -150,11 +152,26 @@ fieldset{
 
 .connexion{
 	text-align: right;
+
 }
 
 .connexion input{
 	width: 50%;
 	margin: 5px;
+	border-radius: 15px;
+}
+
+.connexion a {
+
+	margin-right: 7%;
+	color: white;
+}
+
+#boutoncon{
+background-color: #B13403;
+border: 2px solid black;
+
+
 }
 
 .connexion a{
@@ -245,4 +262,19 @@ fieldset{
 	100% {
 		opacity: 100%;
 	}
+}
+
+
+/* Page profil */
+#profil{
+	background-image: url("img/non.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width:100%;
+	height: 675px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+
 }
