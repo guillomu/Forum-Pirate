@@ -1,4 +1,4 @@
-<div class="col full-height">
+<div id="home" class="col full-height background">
 	<?php
 		require_once "views/navbar.php";
 	?>

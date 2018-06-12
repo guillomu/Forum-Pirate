@@ -8,7 +8,8 @@ if(isset($_POST['inscription'])){
 	$result = $utilisateur->add($utilisateur);
 }
 
-require_once "views/navbar.php";
-require_once "views/inscription.php";
+
+$content = "views/inscription.php";
+require_once "views/layout.php";
 
 ?>

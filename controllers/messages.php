@@ -5,6 +5,7 @@ require_once "models/messages.php";
 $messages =new MessagesModel();
 $MessagesListView= $messages->getAll();
 
-require_once "views/messages.php";
+$content = "views/mesprives.php";
+require_once "views/layout.php";
 
  ?>

@@ -1,6 +1,8 @@
-<div id="profil">
+<div id="profil" class="background">
       <?php
-      	echo '<fieldset><legend>Contacts</legend>
+      require_once "views/navbar.php";
+
+      echo '<fieldset><legend>Contacts</legend>
       <label for="facebook">Votre page Facebook :</label><input type="text" name="facebook" id="face" placeholder=" ton facebook" /><br />
       <label for="instagram">Votre page Instagram :</label><input type="text" name="instagram" id="insta" placeholder= "ton instagram"/>
       </fieldset>

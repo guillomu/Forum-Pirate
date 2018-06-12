@@ -4,8 +4,8 @@
 class Model{
 
 	private $user = "root";
-	//private $password= "simplonco";
-  private $password= "";
+	private $password= "simplonco";
+  	//private $password= "";
 	private $dbname= "forum_pirate";
 	private $host= "localhost";
 	private $port= 8088;

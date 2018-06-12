@@ -1,3 +1,4 @@
 <?php
-	require_once "views/home.php";
+$content = "views/home.php";
+require_once "views/layout.php";
 ?>

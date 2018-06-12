@@ -1,5 +1,6 @@
 <?php
 
+require_once "views/navbar.php";
 
 if (!isset($_POST['inscription'])) // Si on la variable est vide, on peut considérer qu'on est sur la page de formulaire
 {
