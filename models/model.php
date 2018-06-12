@@ -8,11 +8,12 @@ class Model{
   private $password= "";
 	private $dbname= "forum_pirate";
 	private $host= "localhost";
-	private $port= 3306;
+	private $port= 8088;
 
 	public function connect(){
 		try{
 			$db= new PDO ("mysql:host=".$this->host.";dbname=".$this->dbname,$this->user,$this->password);
+			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			return $db;
 		}
 		catch(PDOException $e) {
