@@ -13,7 +13,7 @@
 	else{
 		echo "<h1>Salons</h1>";
 		foreach ($SalonsListView as $salon){
-			echo "<a href=\"/Forum-Pirate/index.php/sujets/".$salon["titre"]."\"><div class=\"salon\"><h3>".$salon["titre"]."</h3><p>Description du Salon</p></div></a>";
+			echo "<a href=\"/Forum-Pirate/index.php/sujets/".$salon["titre"]."\"><div class=\"salon\"><h3>".$salon["titre"]."</h3></div></a>";
 		}
 	}
 
