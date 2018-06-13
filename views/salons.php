@@ -5,7 +5,7 @@
 
 	echo "<div id=\"salons-liste\">";
 	if(isset($controllers[2])){
-		echo "<a href=\"/Forum-Pirate/index.php/salons\"><p>Retour à la liste des salons</p></a> </br>";.
+		echo "<a href=\"/Forum-Pirate/index.php/salons\"><p>Retour à la liste des salons</p></a> </br>";
 		echo "<h1>Salon ".$controllers[2]."</h1>";
 
 	}
