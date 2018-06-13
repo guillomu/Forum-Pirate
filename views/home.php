@@ -1,8 +1,10 @@
+<audio src="music/noscouleurs.mp3"autoplay></audio>
+
 <div id="home" class="col full-height background">
 	<?php
 		require_once "views/navbar.php";
 	?>
-<div class="row quinte">
+<div class="row double">
 	<div class="col accueil-img">
 	</div>
 	<div class="col">

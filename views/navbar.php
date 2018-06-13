@@ -6,7 +6,7 @@
 			<div class="col-sm-6">
 
 				<!-- normal -->
-				<div class="ih-item circle effect18 left_to_right"><a href="/Forum-Pirate/index.php/salons">
+				<div class="test1 ih-item circle effect18 left_to_right"><a href="/Forum-Pirate/index.php/salons">
 					<div class="img"><h3>Faux-Rhum</h3></div>
 					<div class="info">
 						<div class="info-back">
@@ -29,7 +29,7 @@
 			<div class="col-sm-6">
 
 				<!-- normal -->
-				<div class="ih-item circle effect18 left_to_right"><a href="/Forum-Pirate/index.php/inscription">
+				<div class="ih-item circle effect18 left_to_right test1"><a href="/Forum-Pirate/index.php/inscription">
 					<div class="img"><h3>Inscription</h3></div>
 					<div class="info">
 						<div class="info-back">
@@ -47,8 +47,8 @@
 <div class="col connexion text-center double">
 	<?php require_once "./views/connexion.php"; ?>
 </div>
-<?php 
-} 
+<?php
+}
 else{
 	?>
 	<div class="col profil">
@@ -57,7 +57,7 @@ else{
 			<div class="col-sm-6">
 
 				<!-- normal -->
-				<div class="ih-item circle effect18 left_to_right"><a href="/Forum-Pirate/index.php/profil">
+				<div class="ih-item circle effect18 left_to_right test1"><a href="/Forum-Pirate/index.php/profil">
 					<div class="img"><h3>Profil</h3></div>
 					<div class="info">
 						<div class="info-back">
@@ -78,7 +78,7 @@ else{
 		<div class="col-sm-6">
 			<!-- normal -->
 
-			<div class="ih-item circle effect18 left_to_right">
+			<div class="ih-item circle effect18 left_to_right test1">
 				<a href="/Forum-Pirate/index.php/mesprives">
 					<div class="img">
 						<h3>Messages Privés</h3>
@@ -102,7 +102,7 @@ else{
 		<div class="col-sm-6 bloc-center">
 			<!-- normal -->
 
-			<div class="ih-item circle effect18 left_to_right">
+			<div class="ih-item circle effect18 left_to_right test1">
 				<?php echo '<a href="/Forum-Pirate/index.php/'.$controllers[1].'/deconnexion">'; ?>
 					<div class="img">
 						<h3>Déconnexion</h3>
@@ -113,11 +113,17 @@ else{
 					</div>
 				</a>
 			</div>
-			<!-- end normal -->
+
+			<p class="text-center">Bonjour mousaillon <?php echo $_SESSION['utilisateur']->nom_utilisateur(); ?>!<p>
+			<form class="form-inline my-2 my-lg-0">
+			 <input class="form-control " type="search" placeholder="Recherches" aria-label="Search">
+			 <button class="btn" type="submit" id= "boutonrecherches">Recherches</button>
+		 </form>	<!-- end normal -->
 		</div>
 	</div>
 	<!-- end Left to right -->
-	<p class="text-center">Bonjour mousaillon <?php echo $_SESSION['utilisateur']->nom_utilisateur(); ?>!<p>
+
+
 </div>
 <div class="col"></div>
 <?php } ?>
