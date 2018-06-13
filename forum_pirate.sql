@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 07 juin 2018 à 13:09
+-- Généré le :  mer. 13 juin 2018 à 21:19
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -72,15 +72,18 @@ CREATE TABLE IF NOT EXISTS `salons` (
   `id_createur` int(11) NOT NULL,
   `date_creation` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `salons`
 --
 
 INSERT INTO `salons` (`id`, `titre`, `id_createur`, `date_creation`) VALUES
-(1, 'SAVIOR', 3, '2018-06-06 00:00:00'),
-(2, 'Merci', 3, '2018-06-06 00:00:00');
+(1, 'Bateaux', 3, '2018-06-06 00:00:00'),
+(2, 'Costumes', 3, '2018-06-06 00:00:00'),
+(3, 'Boissons', 2, '2018-06-08 00:00:00'),
+(4, 'Armes', 1, '2018-06-13 19:41:00'),
+(5, 'Maquillage', 3, '2018-06-13 15:00:00');
 
 -- --------------------------------------------------------
 
@@ -91,7 +94,6 @@ INSERT INTO `salons` (`id`, `titre`, `id_createur`, `date_creation`) VALUES
 DROP TABLE IF EXISTS `sujets`;
 CREATE TABLE IF NOT EXISTS `sujets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_salon` int(11) NOT NULL,
   `titre` varchar(100) NOT NULL,
   `id_createur` int(11) NOT NULL,
   `date_creation` datetime NOT NULL,
@@ -100,7 +102,18 @@ CREATE TABLE IF NOT EXISTS `sujets` (
   PRIMARY KEY (`id`),
   KEY `sujets_utilisateurs_FK` (`id_utilisateurs`),
   KEY `sujets_salons0_FK` (`id_salons`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `sujets`
+--
+
+INSERT INTO `sujets` (`id`, `titre`, `id_createur`, `date_creation`, `id_utilisateurs`, `id_salons`) VALUES
+(1, 'BlackPearl', 3, '2018-06-13 00:00:00', 1, 1),
+(2, 'Le Hollandais Volant', 2, '2018-06-13 17:50:00', 1, 1),
+(3, 'Rhum', 2, '2018-06-13 17:51:00', 1, 3),
+(4, 'Vodka', 1, '2018-06-12 15:00:00', 1, 3),
+(5, 'Chapeaux', 3, '2018-06-13 14:00:00', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -120,7 +133,14 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `date_de_naissance` datetime NOT NULL,
   `statut` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `utilisateurs`
+--
+
+INSERT INTO `utilisateurs` (`id`, `nom_utilisateur`, `mdp`, `email`, `avatar`, `prenom`, `nom`, `date_de_naissance`, `statut`) VALUES
+(1, 'ReinaSarah', 'starfallah', '', '', '', '', '2018-06-08 00:00:00', 'membre');
 
 --
 -- Contraintes pour les tables déchargées
