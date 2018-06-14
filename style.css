@@ -347,3 +347,25 @@ input[type=submit]{
 
 	background-image: url("img/message.png");
 }
+
+/** formulaire pour rep aux sujet **/
+
+.reponse{
+   
+    margin: auto;
+    width: 50%;
+    background-color: rgb(0,0,0, 0.6);
+	border: 1px solid white;
+	border-radius: 25px;
+	margin: 2% auto;
+	padding: 25px;
+	text-align: center;
+	color: white;
+   
+}
+
+/** titre du sujet**/
+
+h2{
+    text-align: center;
+}
