@@ -12,7 +12,7 @@ if (!isset($_POST['inscription'])) // Si on la variable est vide, on peut consid
 	<fieldset><legend>Identifiants</legend>
 	<label for="pseudo">* Pseudo :</label>  <input name="pseudo" type="text" id="pseudo" placeholder= "choisis ton nom de pirate"/> (le pseudo doit contenir entre 3 et 15 caractères)<br />
 	<label for="password">* Mot de Passe :</label><input type="password" name="password" id="password" placeholder=" mot de passe"/><br />
-	<label for="confirm">* Confirmer le mot de passe :</label><input type="password" name="confirm" id="confirm" placeholder= "confirmer le mot passe"/>
+	<label for="confirm">* Confirmer le mot de passe :</label><input type="password" name="confirm" id="confirm" placeholder= "confirmer le mot passe"/><br />
 	<label for="email">* Votre adresse Mail :</label><input type="text" name="email" id="email" placeholder= "écris ton mail "/><br />
 
 	</fieldset>
