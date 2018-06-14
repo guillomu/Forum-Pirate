@@ -106,7 +106,7 @@ else{
 			<p class="text-center">Bonjour mousaillon <?php echo $_SESSION['utilisateur']->nom_utilisateur(); ?>!<p>
 			<form class="form-inline my-2 my-lg-0">
 			 <input class="form-control " type="search" placeholder="Recherches" aria-label="Search">
-			 <button class="btn" type="submit" id= "boutonrecherches">Recherches</button>
+			 <button class="btn" type="submit" id= "boutonrecherches">Recherche</button>
 		 </form>	<!-- end normal -->
 		</div>
 

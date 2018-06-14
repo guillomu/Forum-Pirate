@@ -49,6 +49,8 @@ a{
 
 fieldset{
 	padding: 10px;
+    
+    
 }
 .row {
 	/*border: 5px solid red;*/
@@ -130,8 +132,7 @@ fieldset{
 	padding: 25px;
 	text-align: center;
 	color: white;
-	height: 300px;
-	overflow: auto;
+    
 }
 
 .profile{
@@ -139,7 +140,7 @@ fieldset{
 	width: 50%;
 	height: 250px;
 	/*border: 3px solid pink;*/
-	margin-left: 270px;
+	margin:auto;
 	color: white;
 	padding-bottom: 300px;
 
@@ -172,8 +173,7 @@ text-align: center;
 
 
 .btn{
-margin-left: 47px;
-
+margin-left: 28%;
 
 }
 
@@ -194,17 +194,14 @@ margin-left: 47px;
 	color: white;
 }
 
-#boutoncon{
-background-color: #B13403;
-border: 2px solid black;
 
-}
 
 input[type=submit]{
 
 	border-radius: 20px;
-	height: 25px;
-	width: 60px;
+	height: 15%;
+	width: 20%;
+    
 }
 
 #deconnexion{
