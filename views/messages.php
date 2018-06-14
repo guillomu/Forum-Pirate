@@ -7,7 +7,7 @@ require_once "views/navbar.php";
 echo '<h2>'.$sujetArray['titre'].'</h2>';
 
 foreach ($MessagesListView as $messages){
-  echo "<br/>-".$messages["contenu"];
+  echo '<br/><div class = "message">'.$messages["contenu"].'</div>';
 }
 
 if(isset($_SESSION['utilisateur'])){
