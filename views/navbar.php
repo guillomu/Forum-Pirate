@@ -97,22 +97,11 @@ else{
 </div>
 <div class="col"></div>
 <div class="col disconnect">
-	<!-- Left to right -->
-	<div class="row">
-		<div class="col-sm-6 bloc-center">
-			<!-- normal -->
 
-			<div class="ih-item circle effect18 left_to_right test1">
-				<?php echo '<a href="/Forum-Pirate/index.php/'.$controllers[1].'/deconnexion">'; ?>
-					<div class="img">
-						<h3>Déconnexion</h3>
-					</div>
-					<div class="info">
-						<div class="info-back">
-						</div>
-					</div>
-				</a>
-			</div>
+	<div class="deconnexion" >
+				<?php echo '<a href="/Forum-Pirate/index.php/'.$controllers[1].'/deconnexion"><input type="button" value="Déconnexion" id="deconnexion"></a>'; ?>
+		</div>
+
 
 			<p class="text-center">Bonjour mousaillon <?php echo $_SESSION['utilisateur']->nom_utilisateur(); ?>!<p>
 			<form class="form-inline my-2 my-lg-0">
@@ -120,11 +109,10 @@ else{
 			 <button class="btn" type="submit" id= "boutonrecherches">Recherches</button>
 		 </form>	<!-- end normal -->
 		</div>
-	</div>
-	<!-- end Left to right -->
 
 
-</div>
+
+
 <div class="col"></div>
 <?php } ?>
 </div>

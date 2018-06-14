@@ -19,7 +19,9 @@
 
       <fieldset><legend>Profil sur le forum</legend>
       <label for="avatar">Choisissez votre avatar : </label><input type="file" name="avatar" id="avatar" /><br />(Taille max:10Ko)<br /><br />
-      <label for="description">Description :</label><textarea cols="40" rows="4" name="description" id="description">Veuillez entrer votre déscription ici</textarea>
+      <label for="description">Description :</label><textarea cols="40" rows="4" name="description" id="description">Veuillez entrer votre déscription ici</textarea><br />
+    	<p class="text-center"><input  type="submit" value="Valider" name="valider" /></p>
+
       </fieldset>';
 
       	echo '</div>'
