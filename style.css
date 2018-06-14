@@ -49,8 +49,8 @@ a{
 
 fieldset{
 	padding: 10px;
-    
-    
+
+
 }
 .row {
 	/*border: 5px solid red;*/
@@ -132,7 +132,7 @@ fieldset{
 	padding: 25px;
 	text-align: center;
 	color: white;
-    
+
 }
 
 .profile{
@@ -197,11 +197,9 @@ margin-left: 28%;
 
 
 input[type=submit]{
-
 	border-radius: 20px;
-	height: 15%;
-	width: 20%;
-    
+	padding: 5px;
+	width: 200px;
 }
 
 #deconnexion{

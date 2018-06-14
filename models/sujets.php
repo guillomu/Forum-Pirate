@@ -26,6 +26,17 @@ class SujetsModel extends Model {
     return $sujetslist;
 
  }
+
+ public function getById($id){
+    $db=parent::connect();
+
+    $sql= "SELECT * FROM sujets WHERE id = :id";
+    $query= $db -> prepare ($sql);
+    $query->bindValue(':id', $id);
+    $query -> execute ();
+    $sujet= $query -> fetch();
+    return $sujet;
+ }
 }
 
  ?>
