@@ -107,6 +107,20 @@ fieldset{
 	margin-bottom: 10%;
 }
 
+/** message du salon et des sujets **/
+
+.message{
+    width: 70%;
+    height: 7%;
+	background-color: rgb(0,0,0, 0.6);
+	border: 1px solid white;
+	border-radius: 25px;
+	margin: auto;
+	padding: 15px;
+	text-align: center;
+	color: white;
+}
+
 #inscription{
 	width: 70%;
 	background-color: rgb(0,0,0, 0.6);
@@ -210,7 +224,7 @@ input[type=submit]{
 	border-style: outset;
 	height: 25px;
 	width: 107px;
-	margin-left:20px;
+	margin-left:38px;
 
 }
 
