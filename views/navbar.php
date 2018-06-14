@@ -55,7 +55,7 @@ else{
 		<!-- Left to right -->
 		<div class="row">
 			<div class="col-sm-6">
-
+				
 				<!-- normal -->
 				<div class="ih-item circle effect18 left_to_right test1"><a href="/Forum-Pirate/index.php/profil">
 					<div class="img"><h3>Profil</h3></div>

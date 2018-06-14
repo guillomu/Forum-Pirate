@@ -16,10 +16,11 @@ class SujetsModel extends Model {
   return $sujetslist;
 }
  public function getBySalons($titre){
-  $db=parent::connect();
+    $db=parent::connect();
 
-    $sql= "SELECT * FROM sujets INNER JOIN salons ON sujets.id_salons = salons.id WHERE salons.titre =" .$titre;
+    $sql= "SELECT sujets.id, sujets.titre, sujets.id_createur, sujets.date_creation, sujets.id_utilisateurs, sujets.id_salons FROM sujets INNER JOIN salons ON sujets.id_salons = salons.id WHERE salons.titre = :titre";
     $query= $db -> prepare ($sql);
+    $query->bindValue(':titre', $titre);
     $query -> execute ();
     $sujetslist= $query -> fetchAll();
     return $sujetslist;
