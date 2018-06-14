@@ -12,9 +12,8 @@
 
 
 foreach ($SujetsListView as $sujets){
-  echo "<div class= 'sujets'><br/>-".$sujets["titre"].'</div>' ;
-
+  echo "<a href=\"/Forum-Pirate/index.php/messages/".$sujets["id"]."\"><div class= 'sujets'>".$sujets["titre"].'</div></a>' ;
 }
 	echo "</div>";
  ?>
-  </div>
+</div>

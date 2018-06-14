@@ -3,9 +3,9 @@
 require_once "models/messages.php";
 
 $messages =new MessagesModel();
-$MessagesListView= $messages->getAll();
+$MessagesListView= $messages->getBySujets($controllers[2]);
 
-$content = "views/mesprives.php";
+$content = "views/messages.php";
 require_once "views/layout.php";
 
  ?>

@@ -24,6 +24,6 @@
 
       </fieldset>';
 
-      	echo '</div>'
+      echo '</div>';
       ?>
 </div>

@@ -1,7 +1,12 @@
+<div id="messages" class="background">
+
 <?php
 
-foreach ($MessagesListView as $messages){
-  echo "<br/>-".$messages["id_sujet"];
-}
+require_once "views/navbar.php";
 
- ?>
+foreach ($MessagesListView as $messages){
+  echo "<br/>-".$messages["contenu"];
+}
+?>
+
+</div>

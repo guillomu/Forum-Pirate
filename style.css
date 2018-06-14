@@ -230,7 +230,7 @@ input[type=submit]{
 	color: white;
 }
 
-.salon:hover{
+.salon:hover, .sujets:hover{
 	background-color: black;
 }
 

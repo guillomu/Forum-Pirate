@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 13 juin 2018 à 21:19
+-- Généré le :  jeu. 14 juin 2018 à 02:09
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -31,15 +31,28 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `messages`;
 CREATE TABLE IF NOT EXISTS `messages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_sujet` int(11) NOT NULL,
-  `id_createur` int(11) NOT NULL,
   `date_creation` datetime NOT NULL,
   `contenu` text NOT NULL,
   `note` int(11) NOT NULL,
   `id_sujets` int(11) NOT NULL,
+  `id_utilisateurs` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `messages_sujets_FK` (`id_sujets`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  KEY `messages_sujets_FK` (`id_sujets`),
+  KEY `id_sujets` (`id_sujets`),
+  KEY `note` (`note`),
+  KEY `note_2` (`note`),
+  KEY `note_3` (`note`),
+  KEY `note_4` (`note`),
+  KEY `id_utilisateurs` (`id_utilisateurs`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `messages`
+--
+
+INSERT INTO `messages` (`id`, `date_creation`, `contenu`, `note`, `id_sujets`, `id_utilisateurs`) VALUES
+(1, '2018-06-14 00:00:00', 'Bonjour!', 5, 1, 2),
+(2, '2018-06-28 00:00:00', 'Yo!', 3, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -95,7 +108,6 @@ DROP TABLE IF EXISTS `sujets`;
 CREATE TABLE IF NOT EXISTS `sujets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titre` varchar(100) NOT NULL,
-  `id_createur` int(11) NOT NULL,
   `date_creation` datetime NOT NULL,
   `id_utilisateurs` int(11) NOT NULL,
   `id_salons` int(11) NOT NULL,
@@ -108,12 +120,12 @@ CREATE TABLE IF NOT EXISTS `sujets` (
 -- Déchargement des données de la table `sujets`
 --
 
-INSERT INTO `sujets` (`id`, `titre`, `id_createur`, `date_creation`, `id_utilisateurs`, `id_salons`) VALUES
-(1, 'BlackPearl', 3, '2018-06-13 00:00:00', 1, 1),
-(2, 'Le Hollandais Volant', 2, '2018-06-13 17:50:00', 1, 1),
-(3, 'Rhum', 2, '2018-06-13 17:51:00', 1, 3),
-(4, 'Vodka', 1, '2018-06-12 15:00:00', 1, 3),
-(5, 'Chapeaux', 3, '2018-06-13 14:00:00', 1, 2);
+INSERT INTO `sujets` (`id`, `titre`, `date_creation`, `id_utilisateurs`, `id_salons`) VALUES
+(1, 'BlackPearl', '2018-06-13 00:00:00', 1, 1),
+(2, 'Le Hollandais Volant', '2018-06-13 17:50:00', 1, 1),
+(3, 'Rhum', '2018-06-13 17:51:00', 1, 3),
+(4, 'Vodka', '2018-06-12 15:00:00', 1, 3),
+(5, 'Chapeaux', '2018-06-13 14:00:00', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -133,14 +145,16 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `date_de_naissance` datetime NOT NULL,
   `statut` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `utilisateurs`
 --
 
 INSERT INTO `utilisateurs` (`id`, `nom_utilisateur`, `mdp`, `email`, `avatar`, `prenom`, `nom`, `date_de_naissance`, `statut`) VALUES
-(1, 'ReinaSarah', 'starfallah', '', '', '', '', '2018-06-08 00:00:00', 'membre');
+(1, 'ReinaSarah', 'starfallah', '', '', '', '', '2018-06-08 00:00:00', 'membre'),
+(2, 'GuiGui', '', '', '', '', '', '2018-06-08 00:00:00', 'membre'),
+(3, 'GuiGui', 'plop', '', '', '', '', '2018-06-08 00:00:00', 'membre');
 
 --
 -- Contraintes pour les tables déchargées
@@ -150,7 +164,8 @@ INSERT INTO `utilisateurs` (`id`, `nom_utilisateur`, `mdp`, `email`, `avatar`, `
 -- Contraintes pour la table `messages`
 --
 ALTER TABLE `messages`
-  ADD CONSTRAINT `messages_sujets_FK` FOREIGN KEY (`id_sujets`) REFERENCES `sujets` (`id`);
+  ADD CONSTRAINT `messages_sujets_FK` FOREIGN KEY (`id_sujets`) REFERENCES `sujets` (`id`),
+  ADD CONSTRAINT `messages_utilisateurs_FK` FOREIGN KEY (`id_utilisateurs`) REFERENCES `utilisateurs` (`id`);
 
 --
 -- Contraintes pour la table `messages_prives`

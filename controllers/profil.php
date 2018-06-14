@@ -3,7 +3,7 @@
 require_once "models/utilisateurs.php";
 
 
-if(isset($_POST['connexion'])){
+if(isset($_POST['valider'])){
 
 $profil =new UtilisateursModel(['id' => 0 ,'avatar' => '', 'prenom' => '', 'nom' => '', 'date_de_naissance' => '']);
 //$ProfilListView= $profil->getById();
