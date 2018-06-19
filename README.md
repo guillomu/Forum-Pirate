@@ -9,3 +9,5 @@ git commit -m "Description des modifications"
 git pull origin master
 
 git push origin master
+
+<img src="img/bateau.jpg" width="546" alt="Bateau Pirate" />
