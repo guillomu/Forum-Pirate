@@ -10,4 +10,4 @@ git pull origin master
 
 git push origin master
 
-<img src="img/bateau.jpg" width="546" alt="Bateau Pirate" />
+<img src="img/perroquet.png" width="546" alt="Bateau Pirate" />
